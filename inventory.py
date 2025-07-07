@@ -29,7 +29,7 @@ shoe_list = []
 # Functions outside the class
 def read_shoes_data():
     try:
-        with open("inventory.txt", "r", encoding="utf-8") as file:
+        with open("inventory.py", "r", encoding="utf-8") as file:
             next(file)
             for line in file:
                 if line.strip():
@@ -40,7 +40,7 @@ def read_shoes_data():
                     shoe_list.append(shoe)
         print("Inventory data loaded successfully.\n")
     except FileNotFoundError:
-        print("Error: inventory.txt not found.\n")
+        print("Error: inventory.py not found.\n")
     except ValueError:
         print("Error: One or more lines in the file are incorrectly formatted.\n")
 
@@ -111,7 +111,7 @@ def highest_qty():
 
 
 def update_inventory_file():
-    with open("inventory.txt", "w", encoding="utf-8") as file:
+    with open("inventory.py", "w", encoding="utf-8") as file:
         file.write("Country,Code,Product,Cost,Quantity\n")
         for shoe in shoe_list:
             file.write(
