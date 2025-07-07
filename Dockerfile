@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-CMD python hello.py
+CMD python inventory.py
